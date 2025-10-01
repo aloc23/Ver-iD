@@ -1,35 +1,31 @@
-import React, { useState, useEffect } from "react";
-import Layout from "./components/Layout";
-import ProfileCard from "./components/ProfileCard";
+
+import React from "react";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Login from "./pages/Login";
+import "./App.css";
 
 function App() {
-  const [profile, setProfile] = useState(null);
-
-  useEffect(() => {
-    // Use hardcoded data so you can view layout and CSS without backend
-    setProfile({
-      name: "Demo Seller",
-      verified_count: 5,
-      facebook_friends: 430,
-      facebook_joined: "2012",
-      instagram_followers: 210,
-      instagram_joined: "2014"
-    });
-    // To use backend, replace above with fetch logic
-    // fetch("http://localhost:8000/users")
-    //   .then(res => res.json())
-    //   .then(data => {
-    //     if (data.length > 0) setProfile(data[0]);
-    //   })
-    //   .catch(err => console.log("Error fetching demo user:", err));
-  }, []);
-
   return (
-    <Layout>
-      {profile ? <ProfileCard profile={profile} /> : <p>Loading profile...</p>}
-    </Layout>
+    <Router>
+      <nav className="navbar">
+        <div className="nav-container">
+          <Link to="/" className="nav-logo">Ver-iD</Link>
+          <div className="nav-links">
+            <Link to="/">Home</Link>
+            <Link to="/about">About</Link>
+            <Link to="/login">Login</Link>
+          </div>
+        </div>
+      </nav>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/login" element={<Login />} />
+      </Routes>
+    </Router>
   );
 }
 
 export default App;
-
