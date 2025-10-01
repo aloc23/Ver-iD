@@ -1,0 +1,47 @@
+.profile-card {
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  background: #fff;
+  text-align: left;
+  font-family: system-ui, sans-serif;
+}
+
+.profile-name {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #222;
+}
+
+.verified {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  color: #2c7a7b;
+  font-weight: 600;
+}
+
+.verified-badge {
+  margin-right: 0.5rem;
+}
+
+.profile-section p {
+  margin: 0.4rem 0;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.app-container {
+  text-align: center;
+  padding: 2rem;
+  background: #f7fafc;
+  min-height: 100vh;
+}
+
+.title {
+  font-size: 2rem;
+  color: #2d3748;
+  margin-bottom: 2rem;
+}

@@ -1,0 +1,33 @@
+
+import React from "react";
+import "../App.css";
+
+function Home() {
+  return (
+    <div className="app-container">
+      <header className="hero">
+        <h1>Welcome to Ver-iD</h1>
+        <p>Your secure digital verification solution.</p>
+        <button className="cta-btn">Get Started</button>
+      </header>
+      <main className="main-content">
+        <section className="features">
+          <div className="feature">
+            <h2>Fast</h2>
+            <p>Instant verification with minimal steps.</p>
+          </div>
+          <div className="feature">
+            <h2>Secure</h2>
+            <p>State-of-the-art encryption keeps your identity safe.</p>
+          </div>
+          <div className="feature">
+            <h2>Simple</h2>
+            <p>Designed with usability and clarity in mind.</p>
+          </div>
+        </section>
+      </main>
+    </div>
+  );
+}
+
+export default Home;
