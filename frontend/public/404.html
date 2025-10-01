@@ -1,1 +1,35 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Ver-iD | Digital Verification App</title><meta name="description" content="A secure, modern app for identity verification."/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet"/><link rel="stylesheet" href="%PUBLIC_URL%/styles.css"/></head><body><noscript>You need to enable JavaScript to run this app.</noscript><div id="root"></div><footer><p>&copy; 2025 Ver-iD. All rights reserved.</p></footer></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ver-iD - Digital Identity Verification</title>
+    <script>
+      // GitHub Pages SPA redirect script
+      // This script takes the current URL and redirects to the index.html page
+      // with the current URL as a query parameter that the React Router can handle
+      const path = window.location.pathname.slice(1);
+      const query = window.location.search;
+      const hash = window.location.hash;
+      
+      if (path && path !== '404.html') {
+        window.location.replace(
+          window.location.origin + 
+          '/Ver-iD/' + 
+          '?p=/' + 
+          path + 
+          query + 
+          hash
+        );
+      }
+    </script>
+</head>
+<body>
+    <div style="display: flex; align-items: center; justify-content: center; min-height: 100vh; font-family: Arial, sans-serif;">
+        <div style="text-align: center;">
+            <h1 style="color: #2563eb; font-size: 3rem; margin-bottom: 1rem;">Ver-iD</h1>
+            <p style="color: #6b7280; font-size: 1.1rem;">Redirecting...</p>
+        </div>
+    </div>
+</body>
+</html>
