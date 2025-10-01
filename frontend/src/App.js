@@ -1,4 +1,3 @@
-
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Home from "./pages/Home";
@@ -6,9 +5,9 @@ import About from "./pages/About";
 import Login from "./pages/Login";
 import "./App.css";
 
-function App() {
+export default function App() {
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <nav className="navbar">
         <div className="nav-container">
           <Link to="/" className="nav-logo">Ver-iD</Link>
@@ -27,5 +26,3 @@ function App() {
     </Router>
   );
 }
-
-export default App;
